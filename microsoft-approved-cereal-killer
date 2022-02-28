@@ -8,7 +8,7 @@ def killorder69():
            for i in range(0, len(list)):
                try:
                    p = psutil.Process(list[i])
-                   if p.cmdline()[0].find("Blitz.exe") != -1:
+                   if p.cmdline()[0].find("LeagueClientUx.exe") != -1:
                        p.kill()
                        ctypes.windll.user32.MessageBoxW(0, 'stop playing league you suck', 'loser', 0x1000)
                        exec(open('send_sms.py').read())
