@@ -1,0 +1,19 @@
+import psutil
+import ctypes
+import send_sms
+       
+def killorder69():
+       while True: 
+           list = psutil.pids()
+           for i in range(0, len(list)):
+               try:
+                   p = psutil.Process(list[i])
+                   if p.cmdline()[0].find("Blitz.exe") != -1:
+                       p.kill()
+                       ctypes.windll.user32.MessageBoxW(0, 'stop playing league you suck', 'loser', 0x1000)
+                       exec(open('send_sms.py').read())
+                       break;
+               except:
+                   pass
+killorder69()             
+
